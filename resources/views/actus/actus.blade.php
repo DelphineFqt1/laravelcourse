@@ -1,6 +1,7 @@
-@extends('layouts.master')
-
-@section('content')
+<x-app-layout>
+<x-slot name="title">
+        News page
+</x-slot>
   
 <!-- Image d'en-tête -->
 
@@ -70,7 +71,7 @@
 
 <footer class="container">
     <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 </footer>
 
-@endsection
+</x-app-layout>
+

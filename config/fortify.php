@@ -61,7 +61,11 @@ return [
     |
     */
 
-    'home' => RouteServiceProvider::HOME,
+     'home' => RouteServiceProvider::HOME, 
+ 
+   /*  'home' => function(){
+    return route('welcome');
+    }, */
 
     /*
     |--------------------------------------------------------------------------
