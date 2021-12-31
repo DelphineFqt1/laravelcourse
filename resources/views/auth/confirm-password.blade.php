@@ -1,7 +1,11 @@
-<x-guest-layout>
+<x-app-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <a href="{{ route('welcome') }}">
+                <div class="img">
+                    <img src="{{URL::asset('Images/logo_face_small.png')}}" alt="logo foyz">
+                </div>
+            </a>
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
@@ -25,4 +29,4 @@
             </div>
         </form>
     </x-jet-authentication-card>
-</x-guest-layout>
+</x-app-layout>

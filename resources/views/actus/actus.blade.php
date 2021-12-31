@@ -2,6 +2,9 @@
 <x-slot name="title">
         News page
 </x-slot>
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
   
 <!-- Image d'en-tête -->
 
@@ -30,6 +33,7 @@
           </a>
         </div>
       </div>
+      <hr class="featurette-divider">
       <div class="py-8 flex flex-wrap md:flex-nowrap">
         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
           <span class="font-semibold title-font text-gray-700">CATEGORY</span>
@@ -46,6 +50,7 @@
           </a>
         </div>
       </div>
+      <hr class="featurette-divider">
       <div class="py-8 flex flex-wrap md:flex-nowrap">
         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
           <span class="font-semibold title-font text-gray-700">CATEGORY</span>
@@ -70,7 +75,7 @@
 <!-- Pied de page -->
 
 <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
+    <p class="float-end"><a href="#">View top</a></p>
 </footer>
 
 </x-app-layout>

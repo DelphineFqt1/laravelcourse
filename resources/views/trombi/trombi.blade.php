@@ -3,18 +3,17 @@
         Team page
 </x-slot>
 
+<link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">L'équipe Foy'z 2021-2022</h1>
         <p class="lead text-muted">Voici une présentation de l'équipe Foy'z qui vous accueille cette année !</p>
-       <!--  <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p> -->
       </div>
     </div>
-  </section>
+</section>
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -23,16 +22,13 @@
         @foreach($foyzmen as $foyzman)
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
+            <div class="img">
+                <img src="{{$foyzman->profile_photo_path}}" class="img-fluid" alt="Profile photo" width= "100%">
+            </div>
             <div class="card-body">
-              <p class="card-text">{{ $foyzman->name }}</p>
+              <h2 class="card-text">{{ $foyzman->name }}</h2>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
+                <p class="card-text">{{ $foyzman->email }}</p>
               </div>
             </div>
           </div>
@@ -45,7 +41,7 @@
   <footer class="text-muted py-5">
   <div class="container">
     <p class="float-end mb-1">
-      <a href="#">Retourner en haut</a>
+      <a href="#">View top</a>
     </p>
   </div>
 </footer>

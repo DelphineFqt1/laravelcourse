@@ -2,6 +2,9 @@
 <x-slot name="title">
         Products page
 </x-slot>
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
   
 <!-- Image d'en-tête -->
 
@@ -35,7 +38,7 @@
 <!-- Pied de page -->
 
 <footer class="container">
-    <p class="float-end"><a href="#">Retourner en haut</a></p>
+    <p class="float-end"><a href="#">View top</a></p>
 </footer>
 
 </x-app-layout>

@@ -35,9 +35,9 @@
               <th scope="col" class="relative px-6 py-3">
                 <span class="sr-only">Profil</span>
               </th>
-              <th scope="col" class="relative px-6 py-3">
+          <!--     <th scope="col" class="relative px-6 py-3">
                 <span class="sr-only">Supprimer</span>
-              </th>
+              </th> -->
               <th scope="col" class="relative px-6 py-3">
                 <span class="sr-only">Rendre Administrateur</span>
               </th>
@@ -79,9 +79,9 @@
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="{{route('admin.profil', $user->id)}}" class="text-indigo-600 hover:text-indigo-900">Profil</a>
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+             <!--  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="#" class="text-red-600 hover:text-indigo-900" >Supprimer</a>
-              </td>
+              </td> -->
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
               
             <x-jet-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
