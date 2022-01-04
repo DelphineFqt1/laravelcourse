@@ -35,7 +35,13 @@ Route::get('/trombi', 'App\Http\Controllers\TrombiController@trombi')->name("tro
 
 Route::get('/admin', 'App\Http\Controllers\AdminsController@admins')->name("admin.admin");
 
+Route::get('/produits/create', 'App\Http\Controllers\ProduitsController@create')->name("produits.create");
+Route::post('/produits/save', 'App\Http\Controllers\ProduitsController@save')->name("produits.save");
+
 Route::get('/admin/profil/{id}', 'App\Http\Controllers\AdminsController@profil')->name("admin.profil");
+
+Route::get('makeAdmin/{id}', 'App\Http\Controllers\AdminsController@makeAdmin')->name("admin.makeAdmin");
+Route::get('makeMember/{id}', 'App\Http\Controllers\AdminsController@makeMember')->name("admin.makeMember");
 
 /* Route::middleware(['auth:sanctum', 'verified'])->get('/index', function () {
     return view('home.index');
@@ -52,8 +58,8 @@ Route::get('/actus', 'App\Http\Controllers\ActusController@actus')->name("actus.
 
 Route::get('/consommations', 'App\Http\Controllers\ProduitsController@consommations')->name("produits.consommations");
 
-Route::get('produits/sodas', 'App\Http\Controllers\ProduitsController@sodas')->name("produits.sodas");
-Route::get('produits/alcools', 'App\Http\Controllers\ProduitsController@alcools')->name("produits.alcools");
-Route::get('produits/nourriture', 'App\Http\Controllers\ProduitsController@nourriture')->name("produits.nourriture");
+Route::get('sodas', 'App\Http\Controllers\ProduitsController@sodas')->name("produits.sodas");
+Route::get('alcools', 'App\Http\Controllers\ProduitsController@alcools')->name("produits.alcools");
+Route::get('nourriture', 'App\Http\Controllers\ProduitsController@nourriture')->name("produits.nourriture");
 
 require_once __DIR__ . '/jetstream.php';

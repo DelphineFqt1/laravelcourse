@@ -28,6 +28,10 @@
                             <x-jet-nav-link href="{{ route('admin.admin') }}" :active="request()->routeIs('admin.admin')">
                                 Manage users
                             </x-jet-nav-link>
+
+                            <x-jet-nav-link href="{{ route('produits.create') }}" :active="request()->routeIs('produits.create')">
+                                Manage products
+                            </x-jet-nav-link>
                         @endif
                     @endif
                     

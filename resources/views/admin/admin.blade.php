@@ -10,7 +10,7 @@
         @else
             <x-slot name="header">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    Liste des utilisateurs: {{Auth::user()->count()}}
+                    Liste des {{Auth::user()->count()}} utilisateurs
                 </h2>
             </x-slot>
     <div class="flex flex-col">
@@ -34,12 +34,6 @@
               </th>
               <th scope="col" class="relative px-6 py-3">
                 <span class="sr-only">Profil</span>
-              </th>
-          <!--     <th scope="col" class="relative px-6 py-3">
-                <span class="sr-only">Supprimer</span>
-              </th> -->
-              <th scope="col" class="relative px-6 py-3">
-                <span class="sr-only">Rendre Administrateur</span>
               </th>
             </tr>
             @foreach($users as $user)
@@ -79,16 +73,12 @@
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <a href="{{route('admin.profil', $user->id)}}" class="text-indigo-600 hover:text-indigo-900">Profil</a>
               </td>
-             <!--  <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <a href="#" class="text-red-600 hover:text-indigo-900" >Supprimer</a>
-              </td> -->
               <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-              
-            <x-jet-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
-                Admin
-            </x-jet-button>
-        
-                <a href="#" class="text-green-600 hover:text-indigo-900">Rendre administrateur</a>
+              @if ($user->current_team_id != 1)
+                      <a href="{{route('admin.makeAdmin', $user->id)}}" class="text-green-600 hover:text-indigo-900">Rendre administrateur</a>
+              @else
+                      <a href="{{route('admin.makeMember', $user->id)}}" class="text-red-600 hover:text-indigo-900">Rendre membre</a> 
+              @endif
               </td>
               
             </tr>
