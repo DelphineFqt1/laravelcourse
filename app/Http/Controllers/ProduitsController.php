@@ -62,7 +62,8 @@ class ProduitsController extends Controller
            "name" => "required|unique:products",
            "price" => "required|numeric|gt:0",
            "stock" => "required|numeric|gt:0",
-           "type" => "required"
+           "type" => "required",
+           "image" => "required"
         ]);
         
         $file = Storage::disk('public')->put('product_images', $request->image);
