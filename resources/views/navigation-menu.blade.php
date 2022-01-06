@@ -20,7 +20,7 @@
                     <x-jet-nav-link href="{{ route('produits.produits') }}" :active="request()->routeIs('produits.produits')">
                         {{ __('Products') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('actus.actus') }}" :active="request()->routeIs('actus.actus')">
+                    <x-jet-nav-link href="{{ route('posts.posts') }}" :active="request()->routeIs('posts.posts')">
                         {{ __('News') }}
                     </x-jet-nav-link>
                     @if (Auth::check()) 
@@ -31,6 +31,10 @@
 
                             <x-jet-nav-link href="{{ route('produits.create') }}" :active="request()->routeIs('produits.create')">
                                 Manage products
+                            </x-jet-nav-link>
+
+                            <x-jet-nav-link href="{{ route('posts.create') }}" :active="request()->routeIs('posts.create')">
+                                Manage posts
                             </x-jet-nav-link>
                         @endif
                     @endif
@@ -182,7 +186,7 @@
             <x-jet-responsive-nav-link href="{{ route('produits.produits') }}" :active="request()->routeIs('produits.produits')">
                 {{ __('Products') }}
             </x-jet-responsive-nav-link>
-            <x-jet-nav-link href="{{ route('actus.actus') }}" :active="request()->routeIs('actus.actus')">
+            <x-jet-nav-link href="{{ route('posts.posts') }}" :active="request()->routeIs('posts.posts')">
                 {{ __('News') }}
             </x-jet-responsive-nav-link>
         </div>

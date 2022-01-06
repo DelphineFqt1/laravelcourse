@@ -51,13 +51,13 @@
 
                 <div class="row featurette">     
                     <div class="col-md-7">
-                        <a href="{{route('actus.actus')}}">
+                        <a href="{{route('posts.posts')}}">
                         <h2 class="featurette-heading">News <!-- <span class="text-muted">Checkmate.</span></h2> -->
                         <p class="lead">Read the school news</p>
                         </a>
                     </div>
                     <div class="col-md-5">
-                        <a href="{{route('actus.actus')}}">
+                        <a href="{{route('posts.posts')}}">
                         <img src="{{URL::asset('Images/actu.jpg')}}" alt="News" width= "100%">
                         </a>
                    </div>

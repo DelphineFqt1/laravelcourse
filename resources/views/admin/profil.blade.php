@@ -1,5 +1,5 @@
 <x-app-layout>
-        @if (Auth::user()->current_team_id != 1)
+        @if ((@is_null(Auth::user()->current_team_id)) or (Auth::user()->current_team_id != 1))
         <br>
         <center>
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-emoji-frown" viewBox="0 0 16 16">

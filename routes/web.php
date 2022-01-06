@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-/* Route::get('/index', 'App\Http\Controllers\HomeController@index')->name("home.index");
- */ 
-Route::get('/contact', 'App\Http\Controllers\HomeController@contact')->name("home.contact");
-
 Route::get('/trombi', 'App\Http\Controllers\TrombiController@trombi')->name("trombi.trombi");
 
 Route::get('/admin', 'App\Http\Controllers\AdminsController@admins')->name("admin.admin");
@@ -33,18 +29,16 @@ Route::get('/admin/profil/{id}', 'App\Http\Controllers\AdminsController@profil')
 Route::get('makeAdmin/{id}', 'App\Http\Controllers\AdminsController@makeAdmin')->name("admin.makeAdmin");
 Route::get('makeMember/{id}', 'App\Http\Controllers\AdminsController@makeMember')->name("admin.makeMember");
 
-/* Route::middleware(['auth:sanctum', 'verified'])->get('/index', function () {
-    return view('home.index');
-})->name('home.index');  */
-
-
 Route::get('/log', 'App\Http\Controllers\AuthController@login')->name("auth.login");
 
 Route::get('/reg', 'App\Http\Controllers\AuthController@register')->name("auth.register");
 
 Route::get('/produits', 'App\Http\Controllers\ProduitsController@produits')->name("produits.produits");
 
-Route::get('/actus', 'App\Http\Controllers\ActusController@actus')->name("actus.actus");
+Route::get('/posts', 'App\Http\Controllers\PostsController@posts')->name("posts.posts");
+Route::get('/posts/create', 'App\Http\Controllers\PostsController@create')->name("posts.create");
+Route::post('/posts/save', 'App\Http\Controllers\PostsController@save')->name("posts.save");
+Route::post('/posts/delete', 'App\Http\Controllers\PostsController@delete')->name("posts.delete");
 
 Route::get('/consommations', 'App\Http\Controllers\ProduitsController@consommations')->name("produits.consommations");
 

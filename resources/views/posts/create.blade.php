@@ -17,7 +17,7 @@
             @include('util.message')
                 <div class="card">
                     <div class="card-header">
-                        Create product
+                        Create post
                     </div>
                     <div class="card-body">
                         @if($errors->any())
@@ -29,26 +29,60 @@
                                 @endforeach
                             </ul>
                         @endif
-                            <form method="POST" action="{{route('produits.save')}}" enctype="multipart/form-data">
+                            <form method="POST" action="{{route('posts.save')}}" enctype="multipart/form-data">
                                 @csrf
-                                <input type="text" placeholder="Enter name" name="name" value="{{old('name')}}"/>
-                                <input type="text" placeholder="Enter price" name="price" value="{{old('price')}}"/>
-                                <input type="text" placeholder="Enter description" name="description" value="{{old('description')}}"/>
-                                <input type="text" placeholder="Enter stock" name="stock" value="{{old('stock')}}"/>
-                                <input type="text" placeholder="Enter type" name="type" value="{{old('type')}}"/>
-                                @csrf
+                                <input type="text" placeholder="Enter title" name="title" value="{{old('title')}}"/>
+                                <br>
+                                <textarea placeholder="Enter content" name="content" cols="50" rows="10"></textarea>
+                
                                 <div class="form-group">
                                 <br>
                                        </div>
-                                       <label>Image:</label>
-                                <input type="file" class="block my-2" id="image" name="image"/>
-                                <input type="submit" value="Send" class="btn btn-primary"/>
+                                    
+                                <input type="submit" value="Create" class="btn btn-primary"/>
                             </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<br>
+
+    <div class="container">
+        <div class="rowjustify-content-center">
+            <div class="col-md-8">
+            @include('util.message')
+                <div class="card">
+                    <div class="card-header">
+                        Delete post
+                    </div>
+                    <div class="card-body">
+                        @if($errors->any())
+                            <ul id="errors">
+                                @foreach($errors->all() as $error)
+                                    <li>
+                                        {{$error}}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
+                            <form method="POST" action="{{route('posts.delete')}}" enctype="multipart/form-data">
+                                @csrf
+                                <input type="text" placeholder="Enter title" name="title" value="{{old('title')}}"/>
+                            
+                                <div class="form-group">
+                                <br>
+                                       </div>
+                                    
+                                <input type="submit" value="Delete" class="btn btn-danger"/>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 @endif
    
