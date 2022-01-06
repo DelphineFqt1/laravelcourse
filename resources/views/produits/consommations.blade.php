@@ -7,13 +7,13 @@
         </h2>
     </x-slot>
 
-    <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8 bg-white">
     <div class="bd-example">
       
       @if ($user->ventes -> count() == 0)
         <span>C'est vide ici...n'hésites pas à regarder notre carte !</span>
       @else
-        <table class="table table-striped">
+        <table class="table table-striped bg-white">
           <thead>
           <tr>
             <th scope="col">#</th>
@@ -25,10 +25,10 @@
             @foreach($user->ventes as $vente)
               <tbody>
                 <tr>
-                  <th scope="row"><img src="{{$vente->product->image}}" alt="Image du produit" width="40" heigth="40"></th>
-                  <td>{{$vente->product->name}}</td>
-                  <td>{{$vente->product->price}}€</td>
-                  <td>{{$vente->created_at}}</td>
+                  <th scope="row" class="bg-white"><img src="{{$vente->product->image}}" alt="Image du produit" width="40" heigth="40"></th>
+                  <td class="bg-white">{{$vente->product->name}}</td>
+                  <td class="bg-white">{{$vente->product->price}}€</td>
+                  <td class="bg-white">{{$vente->created_at}}</td>
                 </tr>
               </tbody>
             @endforeach

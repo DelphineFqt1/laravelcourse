@@ -67,7 +67,7 @@ class ProduitsController extends Controller
         ]);
         
         $file = Storage::disk('public')->put('product_images', $request->image);
-        $path = "../storage/app/public/" . $file;
+        $path = url('storage/') . '/' . $file;
         
         Product::create($request->only(["name", "price", "description", "stock", "type"]));
         Product::where('name', $request->name)->update(['image' => $path]);
